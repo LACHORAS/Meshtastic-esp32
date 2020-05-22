@@ -21,23 +21,26 @@ This software is 100% open source and developed by a group of hobbyist experimen
 ## Supported hardware
 
 We currently support three models of radios.
+
 - TTGO T-Beam
-    - [T-Beam V1.0 w/ NEO-M8N](https://www.aliexpress.com/item/33047631119.html) (Recommended)
-    - [T-Beam V1.0 w/ NEO-6M](https://www.aliexpress.com/item/33050391850.html)
-    - 3D printable cases
-      - [T-Beam V0](https://www.thingiverse.com/thing:3773717)
-      - [T-Beam V1](https://www.thingiverse.com/thing:3830711)
+
+  - [T-Beam V1.0 w/ NEO-M8N](https://www.aliexpress.com/item/33047631119.html) (Recommended)
+  - [T-Beam V1.0 w/ NEO-6M](https://www.aliexpress.com/item/33050391850.html)
+  - 3D printable cases
+    - [T-Beam V0](https://www.thingiverse.com/thing:3773717)
+    - [T-Beam V1](https://www.thingiverse.com/thing:3830711)
 
 - [TTGO LORA32](https://www.aliexpress.com/item/4000211331316.html) - No GPS
 
 - [Heltec LoRa 32](https://heltec.org/project/wifi-lora-32/) - No GPS
-    - [3D Printable case](https://www.thingiverse.com/thing:3125854)
+  - [3D Printable case](https://www.thingiverse.com/thing:3125854)
 
 **Make sure to get the frequency for your country**
-  - US/JP/AU/NZ - 915MHz
-  - CN - 470MHz
-  - EU - 870MHz
-  
+
+- US/JP/AU/NZ - 915MHz
+- CN - 470MHz
+- EU - 870MHz
+
 Getting a version that includes a screen is optional, but highly recommended.
 
 ## Firmware Installation
@@ -57,7 +60,7 @@ Please post comments on our [group chat](https://meshtastic.discourse.group/) if
 7. Browse to the previously downloaded firmware and select the correct firmware based on the board type, country and frequency.
 8. Select Flash ESP.
 9. Once complete, “Done! Flashing is complete!” will be shown.
-10. Debug messages sent from the Meshtastic device can be viewed with a terminal program such as [PuTTY](https://www.putty.org/) (Windows only). Within PuTTY, click “Serial”, enter the “Serial line” com port (can be found at step 4), enter “Speed” as 921600, then click “Open”. 
+10. Debug messages sent from the Meshtastic device can be viewed with a terminal program such as [PuTTY](https://www.putty.org/) (Windows only). Within PuTTY, click “Serial”, enter the “Serial line” com port (can be found at step 4), enter “Speed” as 921600, then click “Open”.
 
 ### Installing from a commandline
 
@@ -87,10 +90,10 @@ Hard resetting via RTS pin...
 ```
 
 5. cd into the directory where the release zip file was expanded.
-6. Install the correct firmware for your board with `device-install.sh firmware-_board_-_country_.bin`. 
-    - Example: `./device-install.sh firmware-HELTEC-US-0.0.3.bin`.
+6. Install the correct firmware for your board with `device-install.sh firmware-_board_-_country_.bin`.
+   - Example: `./device-install.sh firmware-HELTEC-US-0.0.3.bin`.
 7. To update run `device-update.sh firmware-_board_-_country_.bin`
-    - Example: `./device-update.sh firmware-HELTEC-US-0.0.3.bin`.
+   - Example: `./device-update.sh firmware-HELTEC-US-0.0.3.bin`.
 
 Note: If you have previously installed meshtastic, you don't need to run this full script instead just run "esptool.py --baud 921600 write*flash 0x10000 firmware-\_board*-_country_.bin". This will be faster, also all of your current preferences will be preserved.
 
@@ -186,7 +189,9 @@ This project is run by volunteers. Past contributors include:
 
 - @astro-arphid: Added support for 433MHz radios in europe.
 - @claesg: Various documentation fixes and 3D print enclosures
+- @dafeman: Bluetooth fixes
 - @girtsf: Lots of improvements
+- @mehuman: Documentation improvements
 - @spattinson: Fixed interrupt handling for the AXP192 part
 
 # IMPORTANT DISCLAIMERS AND FAQ
